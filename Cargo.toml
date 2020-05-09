@@ -1,14 +1,30 @@
 [package]
+authors = ["roblabla <robinlambertz+dev@gmail.com>"]
 name = "i3-tmux-integration"
 version = "0.1.0"
-authors = ["roblabla <robinlambertz+dev@gmail.com>"]
 
 [dependencies]
-pty = "*"
-libc = "*"
-termion = "*"
-twoway = "*"
-chan = "*"
-log = "*"
+backtrace = "*"
+byteorder = "*"
+error-chain = "0.10.0"
 fern = "*"
 i3ipc = "*"
+libc = "*"
+log = "*"
+mio = "0.6.10"
+mio-uds = "0.6.4"
+pty = "*"
+tempdir = "*"
+termios = "*"
+twoway = "*"
+unescape = "*"
+
+[dependencies.nix]
+branch = "bugfix-multipleFdInCmsg"
+feature = ["signalfd"]
+git = "https://github.com/roblabla/nix"
+
+[dependencies.nom]
+branch = "feature-stdlibCompileError"
+features = ["nightly"]
+git = "https://github.com/roblabla/nom"
