@@ -18,13 +18,6 @@ tempdir = "*"
 termios = "*"
 twoway = "*"
 unescape = "*"
+nom = "*"
+nix = "*"
 
-[dependencies.nix]
-branch = "bugfix-multipleFdInCmsg"
-feature = ["signalfd"]
-git = "https://github.com/roblabla/nix"
-
-[dependencies.nom]
-branch = "feature-stdlibCompileError"
-features = ["nightly"]
-git = "https://github.com/roblabla/nom"
